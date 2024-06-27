@@ -1,9 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Reddit.Models;
 
 namespace Reddit
 {
-    public class ApplicationDbContext: DbContext
+    public class ApplicationDbContext: IdentityUserContext<ApplicationUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions): base(dbContextOptions)
         {
